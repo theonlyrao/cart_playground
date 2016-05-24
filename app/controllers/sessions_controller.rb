@@ -13,13 +13,9 @@ class SessionsController < ApplicationController
            }
     res = Net::HTTP.post_form(uri, args)
     session[:token] = res.body
-    #hashed = Digest::SHA256.digest(res)
-        uri = URI("https://api.github.com/user?#{@user.token}")
+    uri = URI("https://api.github.com/user?#{session[:token]}")
     user_data = JSON.parse(Net::HTTP.get(uri))
-    @user_name = user_data["login"]
-    @user_url = user_data["html_url"]
-    @user = User.find_or_create_by(token: session[:token])
-    # move three or four lines below here and then update based on these params
+    @user = User.find_by(token: session[:token]) || User.create(username: user_data["login"], url: user_data["html_url"], token: session[:token])
     redirect_to user_path(@user)
   end
 
