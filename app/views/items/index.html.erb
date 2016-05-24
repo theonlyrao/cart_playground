@@ -1,8 +1,4 @@
 <h1>Items#index</h1>
 <p>Find me in app/views/items/index.html.erb</p>
 
-<% if session[:token].nil? %>
-    <a href=<%= login_path %>>Login</a>
-<% else %>
-    <a href=<%= logout_path%>>Logout</a>
-<% end %>
+<%= render partial: "shared/navbar" %>

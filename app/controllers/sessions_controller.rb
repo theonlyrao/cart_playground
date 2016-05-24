@@ -7,8 +7,8 @@ class SessionsController < ApplicationController
 
   def register
     uri = URI.parse("https://github.com/login/oauth/access_token")
-    args = { client_id: "bb2b36e8f42f81ee0583",
-             client_secret: "4c55a6d7a9ca305714b37ddcbb6ef1e9c6da7a78",
+    args = { client_id: Pusher.client_id,
+             client_secret: Pusher.client_secret,
              code: params[:code]
            }
     res = Net::HTTP.post_form(uri, args)
@@ -20,6 +20,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session[:token] = nil
+    session[:token].clear
+    redirect_to root_path
   end
 end
