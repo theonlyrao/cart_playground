@@ -6,8 +6,6 @@ Rails.application.routes.draw do
 
   get "/welcome" => "sessions#register", as: :welcome_path
 
-  get "/home" => "sessions#arrived", as: :post_login
-
   get "/user/:id" => "users#show", as: :user
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
