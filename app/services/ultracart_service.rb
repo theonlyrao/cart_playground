@@ -10,10 +10,10 @@ class UltracartService
 
   def add_item(item)
     atomic = Faraday.new(url: "http://secure.ultracart.com/")
-    new_cart = atomic.put "rest/site" do |faraday| 
-      faraday.headers['Content-Type'] = 'application-json'
-      faraday.headers['X-UC-Merchant-Id'] = 'ATOMA'      
-      faraday.body = {'items' => item}
+    item_json = item.to_json
+    raw_cart = atomic.put "rest/cart" do |faraday| 
+      faraday.body = {"merchantId": ENV["merchant_id"], "items": [item], "cartID": ""}.to_json
     end
+    JSON.parse(raw_cart.body)
   end
 end
