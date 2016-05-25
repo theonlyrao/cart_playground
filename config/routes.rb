@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'items#index'
+  root 'items#index', as: :root
 
   get "/login" => "sessions#create", as: :login
   get "/logout" => "sessions#destroy", as: :logout
@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get "/welcome" => "sessions#register", as: :welcome_path
 
   get "/user/:id" => "users#show", as: :user
+
+  get "/items/:id" => "carts#add_to_cart", as: :add_to_cart
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
