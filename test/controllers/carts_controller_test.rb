@@ -5,10 +5,4 @@ class CartsControllerTest < ActionController::TestCase
     get(:add_to_cart, {id: "OM-2"})
     assert_equal ["OM-2"], @controller.session[:cart]
   end
-
-  test "user can add item to actual cart" do
-    
-  end
-  
-
 end

@@ -1,0 +1,36 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://secure.ultracart.com/rest/site/items/OM-2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      X-Uc-Merchant-Id:
+      - ATOMA
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 25 May 2016 18:37:48 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"description":"1-year Membership","preorder":false,"autoOrderable":false,"inventoryTracked":false,"manufacturerSuggestedRetailPrice":null,"multimedias":[],"maximumQuantity":null,"variationMatrix":null,"variations":[],"baseCurrencyCode":null,"cost":120.00,"inactive":false,"inStock":true,"length":{"value":0.00000,"uom":"IN"},"attributes":[],"cases":[],"minimumQuantity":1,"height":{"value":0.00000,"uom":"IN"},"width":{"value":0.00000,"uom":"IN"},"weight":null,"extendedDescription":"","itemId":"OM-2","currencyCode":"USD","itemOid":5195109,"costLocalizedFormatted":"$120.00","availableQuantity":0,"allowBackorder":false,"defaultImageUrl":null,"defaultThumbnailUrl":null,"options":[],"schedules":[],"costLocalized":120.00,"manufacturerSuggestedRetailPriceLocalized":null,"viewUrl":null,"manufacturerSuggestedRetailPriceLocalizedFormatted":null,"defaultImageSsl":null,"defaultThumbnailSsl":null}'
+    http_version: 
+  recorded_at: Wed, 25 May 2016 18:37:48 GMT
+recorded_with: VCR 3.0.3
