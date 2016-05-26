@@ -1,19 +1,26 @@
 class UltracartService
 
+  def initialize
+    @atomic = Faraday.new(url: "http://secure.ultracart.com/") 
+  end
+  
   def get_item(id)
-    atomic = Faraday.new(url: "http://secure.ultracart.com/")
-    raw_item = atomic.get "rest/site/items/#{id}" do |faraday| 
+    raw_item = @atomic.get "rest/site/items/#{id}" do |faraday| 
       faraday.headers['X-UC-Merchant-Id'] = 'ATOMA'
     end
-    JSON.parse(raw_item.body)
+    parse(raw_item)
   end
 
-  def add_item(item)
-    atomic = Faraday.new(url: "http://secure.ultracart.com/")
-    item_json = item.to_json
-    raw_cart = atomic.put "rest/cart" do |faraday| 
-      faraday.body = {"merchantId": ENV["merchant_id"], "items": [item], "cartID": ""}.to_json
+  def add_item(items)
+    raw_cart = @atomic.put "rest/cart" do |faraday| 
+      faraday.body = {"merchantId": ENV["merchant_id"], "items": items, "cartID": ""}.to_json
     end
-    JSON.parse(raw_cart.body)
+    parse(raw_cart)
+  end
+
+  private
+
+  def parse(response)
+    JSON.parse(response.body)
   end
 end

@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 25 May 2016 22:00:10 GMT
+      - Wed, 25 May 2016 22:50:07 GMT
       Server:
       - Apache
       Content-Type:
@@ -32,5 +32,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"description":"1-year Membership","weight":null,"itemId":"OM-2","currencyCode":"USD","maximumQuantity":null,"extendedDescription":"","itemOid":5195109,"costLocalizedFormatted":"$120.00","autoOrderable":false,"preorder":false,"options":[],"height":{"uom":"IN","value":0.00000},"width":{"uom":"IN","value":0.00000},"inactive":false,"variationMatrix":null,"variations":[],"defaultImageSsl":null,"defaultThumbnailSsl":null,"manufacturerSuggestedRetailPriceLocalizedFormatted":null,"baseCurrencyCode":null,"cost":120.00,"inventoryTracked":false,"inStock":true,"viewUrl":null,"schedules":[],"costLocalized":120.00,"availableQuantity":0,"allowBackorder":false,"manufacturerSuggestedRetailPriceLocalized":null,"defaultImageUrl":null,"defaultThumbnailUrl":null,"length":{"uom":"IN","value":0.00000},"attributes":[],"manufacturerSuggestedRetailPrice":null,"multimedias":[],"cases":[],"minimumQuantity":1}'
     http_version: 
-  recorded_at: Wed, 25 May 2016 22:00:10 GMT
+  recorded_at: Wed, 25 May 2016 22:50:08 GMT
 recorded_with: VCR 3.0.3

@@ -1,0 +1,105 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://secure.ultracart.com/rest/site/items/OM-2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      X-Uc-Merchant-Id:
+      - ATOMA
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 25 May 2016 23:43:02 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"description":"1-year Membership","height":{"value":0.00000,"uom":"IN"},"width":{"value":0.00000,"uom":"IN"},"currencyCode":"USD","options":[],"preorder":false,"inactive":false,"weight":null,"autoOrderable":false,"baseCurrencyCode":null,"cost":120.00,"variationMatrix":null,"variations":[],"multimedias":[],"length":{"value":0.00000,"uom":"IN"},"attributes":[],"inStock":true,"cases":[],"minimumQuantity":1,"availableQuantity":0,"allowBackorder":false,"defaultImageUrl":null,"defaultThumbnailUrl":null,"manufacturerSuggestedRetailPrice":null,"schedules":[],"costLocalized":120.00,"manufacturerSuggestedRetailPriceLocalized":null,"viewUrl":null,"costLocalizedFormatted":"$120.00","manufacturerSuggestedRetailPriceLocalizedFormatted":null,"itemId":"OM-2","maximumQuantity":null,"inventoryTracked":false,"defaultImageSsl":null,"defaultThumbnailSsl":null,"extendedDescription":"","itemOid":5195109}'
+    http_version: 
+  recorded_at: Wed, 25 May 2016 23:43:03 GMT
+- request:
+    method: get
+    uri: http://secure.ultracart.com/rest/site/items/OM-5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      X-Uc-Merchant-Id:
+      - ATOMA
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 25 May 2016 23:43:02 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"description":"Lifetime Membership","height":{"value":0.00000,"uom":"IN"},"width":{"value":0.00000,"uom":"IN"},"currencyCode":"USD","options":[],"preorder":false,"inactive":false,"weight":null,"autoOrderable":false,"baseCurrencyCode":null,"cost":2000.00,"variationMatrix":null,"variations":[],"multimedias":[],"length":{"value":0.00000,"uom":"IN"},"attributes":[],"inStock":true,"cases":[],"minimumQuantity":1,"availableQuantity":0,"allowBackorder":false,"defaultImageUrl":null,"defaultThumbnailUrl":null,"manufacturerSuggestedRetailPrice":null,"schedules":[],"costLocalized":2000.00,"manufacturerSuggestedRetailPriceLocalized":null,"viewUrl":"http://secure.ultracart.com/catalog/ATOMA/sale/OM-5.html","costLocalizedFormatted":"$2,000.00","manufacturerSuggestedRetailPriceLocalizedFormatted":null,"itemId":"OM-5","maximumQuantity":1,"inventoryTracked":false,"defaultImageSsl":null,"defaultThumbnailSsl":null,"extendedDescription":"","itemOid":5208545}'
+    http_version: 
+  recorded_at: Wed, 25 May 2016 23:43:03 GMT
+- request:
+    method: put
+    uri: http://secure.ultracart.com/rest/cart
+    body:
+      encoding: UTF-8
+      string: '{"merchantId":"ATOMA","items":[{"table":{"description":"1-year Membership","height":{"value":0.0,"uom":"IN"},"width":{"value":0.0,"uom":"IN"},"currencyCode":"USD","options":[],"preorder":false,"inactive":false,"weight":null,"autoOrderable":false,"baseCurrencyCode":null,"cost":120.0,"variationMatrix":null,"variations":[],"multimedias":[],"length":{"value":0.0,"uom":"IN"},"attributes":[],"inStock":true,"cases":[],"minimumQuantity":1,"availableQuantity":0,"allowBackorder":false,"defaultImageUrl":null,"defaultThumbnailUrl":null,"manufacturerSuggestedRetailPrice":null,"schedules":[],"costLocalized":120.0,"manufacturerSuggestedRetailPriceLocalized":null,"viewUrl":null,"costLocalizedFormatted":"$120.00","manufacturerSuggestedRetailPriceLocalizedFormatted":null,"itemId":"OM-2","maximumQuantity":null,"inventoryTracked":false,"defaultImageSsl":null,"defaultThumbnailSsl":null,"extendedDescription":"","itemOid":5195109}},{"table":{"description":"Lifetime
+        Membership","height":{"value":0.0,"uom":"IN"},"width":{"value":0.0,"uom":"IN"},"currencyCode":"USD","options":[],"preorder":false,"inactive":false,"weight":null,"autoOrderable":false,"baseCurrencyCode":null,"cost":2000.0,"variationMatrix":null,"variations":[],"multimedias":[],"length":{"value":0.0,"uom":"IN"},"attributes":[],"inStock":true,"cases":[],"minimumQuantity":1,"availableQuantity":0,"allowBackorder":false,"defaultImageUrl":null,"defaultThumbnailUrl":null,"manufacturerSuggestedRetailPrice":null,"schedules":[],"costLocalized":2000.0,"manufacturerSuggestedRetailPriceLocalized":null,"viewUrl":"http://secure.ultracart.com/catalog/ATOMA/sale/OM-5.html","costLocalizedFormatted":"$2,000.00","manufacturerSuggestedRetailPriceLocalizedFormatted":null,"itemId":"OM-5","maximumQuantity":1,"inventoryTracked":false,"defaultImageSsl":null,"defaultThumbnailSsl":null,"extendedDescription":"","itemOid":5208545}}],"cartID":""}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 25 May 2016 23:43:02 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"currencyCode":"USD","total":0.00,"giftEmail":null,"comments":null,"shipToTitle":"","exchangeRate":null,"upsellPathCode":null,"gift":false,"surcharge":0.00,"giftCharge":0.00,"giftWrapCost":0.00,"giftMessage":null,"purchaseOrderNumber":"","giftCertificateAmount":0.00,"shipToEveningPhone":"","insureShipSeparate":false,"ccEmail":null,"creditCardToken":null,"liftGate":false,"taxExempt":false,"affiliateSubId":null,"billToCompany":"","billToAddress1":"","billToAddress2":"","billToCity":"","billToState":"","billToCountry":"","billToEveningPhone":"","storeCreditCard":false,"buysafeBondFree":false,"buysafeCartDisplayText":null,"buysafeCartDisplayUrl":null,"arbitraryTax":null,"arbitraryTaxableSubtotal":null,"arbitraryTaxRate":null,"specialInstructions":"","emailConfirm":"","subtotal":0.00,"deliveryDate":null,"shipToResidential":false,"shipToFirstName":"","shipToLastName":"","shipToAddress1":"","shipToAddress2":"","shipToCity":"","shipToState":"","shipToCompany":"","shipToCountry":"","shipToPhone":"","screenBrandingThemeCode":"DFLT","customField1":null,"customField2":null,"customField3":null,"customField4":null,"customField5":null,"customField6":null,"customField7":null,"tax":0.00,"items":[],"buysafeBondAvailable":false,"buysafeBondWanted":false,"buysafeBondCost":null,"insureShipAvailable":false,"insureShipWanted":false,"insureShipCost":null,"subtotalDiscount":0,"advertisingSource":"","coupons":[],"paymentMethod":"","arbitraryShippingHandlingTotal":null,"threatMetrixParams":null,"amazonOrderReferenceId":null,"taxRate":0,"baseCurrencyCode":"USD","shippingMethod":"","taxableSubtotal":0,"taxableSubtotalDiscount":0,"languageIsoCode":null,"ipAddress":"50.134.227.254","customerProfile":null,"creditCardNumber":"","creditCardVerificationNumber":null,"shipOnDate":null,"errors":["Invalid
+        item ID: null"],"taxCounty":"","loggedIn":false,"password":null,"affiliateId":null,"giftCertificate":null,"mailingListOptIn":false,"shippingHandling":0.00,"hasGoogleCheckout":false,"googleCheckoutCompatible":false,"googleCheckoutButtonUrl":null,"googleCheckoutButtonAltText":null,"payPalButtonUrl":"https://www.paypal.com/en_US/i/btn/btn_xpressCheckoutsm.gif","payPalButtonAltText":"Fast,
+        secure checkout with PayPal","hasPayPal":true,"payPalCompatible":true,"subtotalWithDiscount":0.00,"taxableSubtotalWithDiscount":0,"shippingHandlingDiscount":0,"shippingHandlingWithDiscount":0.00,"giftCertificateRemainingBalanceAfterOrder":null,"creditCardTypes":["AMEX","MasterCard","VISA"],"collectCreditCardVerificationNumber":true,"needShipping":false,"diagnostics":null,"amazonButtonUrl":null,"amazonWidgetUrl":null,"hasAmazon":false,"amazonMerchantId":null,"needPayment":true,"subtotalLocalized":0.00,"subtotalDiscountLocalized":0.00,"subtotalWithDiscountLocalized":0.00,"taxLocalized":0.00,"taxableSubtotalLocalized":0.00,"taxableSubtotalDiscountLocalized":0.00,"taxableSubtotalWithDiscountLocalized":0.00,"buysafeBondCostLocalized":null,"shippingHandlingLocalized":0.00,"shippingHandlingDiscountLocalized":0.00,"shippingHandlingWithDiscountLocalized":0.00,"giftChargeLocalized":0.00,"giftCertificateAmountLocalized":0.00,"giftCertificateRemainingBalanceAfterOrderLocalized":null,"giftWrapCostLocalized":0.00,"surchargeLocalized":0.00,"totalLocalized":0.00,"subtotalLocalizedFormatted":"$0.00","subtotalDiscountLocalizedFormatted":"$0.00","subtotalWithDiscountLocalizedFormatted":"$0.00","taxLocalizedFormatted":"$0.00","taxableSubtotalLocalizedFormatted":"$0.00","taxableSubtotalDiscountLocalizedFormatted":"$0.00","taxableSubtotalWithDiscountLocalizedFormatted":"$0.00","buysafeBondCostLocalizedFormatted":null,"shippingHandlingLocalizedFormatted":"$0.00","shippingHandlingDiscountLocalizedFormatted":"$0.00","shippingHandlingWithDiscountLocalizedFormatted":"$0.00","giftChargeLocalizedFormatted":"$0.00","giftCertificateAmountLocalizedFormatted":"$0.00","giftCertificateRemainingBalanceAfterOrderLocalizedFormatted":null,"giftWrapCostLocalizedFormatted":"$0.00","surchargeLocalizedFormatted":"$0.00","totalLocalizedFormatted":"$0.00","payPalBmlButtonUrl":"https://secure.ultracart.com/checkout/images/paypalBml.png","payPalBmlLegalUrl":"https://www.securecheckout.billmelater.com/paycapture-content/fetch?hash=AU826TU8&content=/bmlweb/ppwpsiw.html","payPalBmlLegalImageUrl":"https://www.paypalobjects.com/webstatic/en_US/btn/btn_bml_text.png","cartId":"E54EF263E523380154EA4CCFBB051500","billToTitle":"","billToPostalCode":"","billToDayPhone":"","shipToPostalCode":"","customerProfileCreditCardId":null,"creditCardType":"","creditCardExpirationMonth":0,"creditCardExpirationYear":0,"merchantId":"ATOMA","billToFirstName":"","billToLastName":"","email":""}'
+    http_version: 
+  recorded_at: Wed, 25 May 2016 23:43:03 GMT
+recorded_with: VCR 3.0.3

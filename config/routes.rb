@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get "/user/:id" => "users#show", as: :user
 
   get "/items/:id" => "carts#add_to_cart", as: :add_to_cart
+
+  get "/cart" => "carts#view_cart", as: :cart
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

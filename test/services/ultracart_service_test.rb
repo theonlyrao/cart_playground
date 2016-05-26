@@ -14,9 +14,22 @@ class UltracartServiceTest < Minitest::Test
     VCR.use_cassette("ultracart_service#one_item_cart") do
       uc = UltracartService.new
       one_year = uc.get_item("OM-2")
-      cart_info = uc.add_item(one_year)
+      items = [one_year]
+      cart_info = uc.add_item(items)
 
       assert_equal 120, cart_info["total"]
+    end
+  end
+
+  def test_service_can_add_mult_items_to_cart
+    VCR.use_cassette("ultracart_service#two_item_cart") do
+      uc = UltracartService.new
+      one_year = uc.get_item("OM-2")
+      lifetime = uc.get_item("OM-5")
+      items = [one_year, lifetime]
+      cart_info = uc.add_item(items)
+
+      assert_equal 2120, cart_info["total"]
     end
   end
 end
