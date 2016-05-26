@@ -89,6 +89,7 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.0.0)
     minitest (5.9.0)
+    minitest-stub_any_instance (1.0.1)
     multi_json (1.12.1)
     multipart-post (2.0.0)
     nokogiri (1.6.7.2)
@@ -181,6 +182,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   minitest
+  minitest-stub_any_instance
   rails (= 4.2.6)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

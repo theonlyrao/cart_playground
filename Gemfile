@@ -42,6 +42,7 @@ group :development, :test do
   gem 'launchy'
   gem "vcr"
   gem "webmock"
+  gem "minitest-stub_any_instance"
 end
 
 group :development do

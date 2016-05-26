@@ -11,4 +11,11 @@ class CartMakerTest < ActiveSupport::TestCase
     end
   end
 
+  def test_cart_maker_works_with_no_items
+    cart_maker = CartMaker.new(nil)
+
+    assert_equal true, cart_maker.items.nil?
+  end
+
 end
+

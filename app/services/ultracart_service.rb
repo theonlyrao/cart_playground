@@ -18,6 +18,14 @@ class UltracartService
     parse(raw_cart)
   end
 
+  def remove_item(remove, all)
+    all.delete_at(all.index(remove))
+    items = all.map do |id|
+      self.get_item(id)
+    end
+    self.add_item(items)
+  end
+
   private
 
   def parse(response)

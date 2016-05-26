@@ -1,9 +1,14 @@
 <h1>Your cart at view/carts/view_cart.html.erb</h1>
 
-<ol>
-<% @cart.items.each do |item| %>
-    <li> <%= item.description %>, <%= item.costLocalizedFormatted %></li>
-<% end %>
-</ol>
+<%= render partial: "shared/navbar" %>
 
-<p>Total Price: <%= @cart.properties.total %></p>
+<% if @cart.items.nil? || @cart.items == [] %>
+    <p>Please add items to your cart.</p>
+<% else %>
+    <ol>
+	<% @cart.items.each do |item| %>
+	    <li> <%= item.description %>, <%= item.costLocalizedFormatted %> - <%= link_to "Remove", "/remove/#{item.itemId}" %></li>
+	<% end %>
+    </ol>
+    <p>Total Price: <%= @cart.properties.totalLocalizedFormatted %></
+<% end %>
