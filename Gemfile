@@ -43,6 +43,7 @@ group :development, :test do
   gem "vcr"
   gem "webmock"
   gem "minitest-stub_any_instance"
+  gem 'simplecov', :require => false
 end
 
 group :development do
