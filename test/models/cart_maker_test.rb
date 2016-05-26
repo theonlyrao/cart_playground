@@ -7,7 +7,7 @@ class CartMakerTest < ActiveSupport::TestCase
       
       assert_equal("1-year Membership", cart_maker.items.first.description)
       assert_equal("Lifetime Membership", cart_maker.items.last.description)
-      assert_equal 2120.00, cart_maker.cart.total
+      assert_equal 2120.00, cart_maker.properties.total
     end
   end
 
